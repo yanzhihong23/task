@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+	<title>任务详情</title>
+	<link rel="stylesheet" type="text/css" href="styles/loading.css">
+	<link rel="stylesheet" type="text/css" href="styles/detail.css">
+</head>
+<body>
+	<header class="info clearfix">
+		<img src="images/avatar-girl@2x.png" width="75px" class="avatar">
+		<div class="desc">
+			<div class="company">XXX推广公司</div>
+			<div class="user">
+				<span class="name">张三</span>
+				<span class="phone">13829083210</span>
+			</div>
+			<div class="task">任务：推广xxxxx，为期45天。</div>
+		</div>
+	</header>
+
+	<section class="timeline">
+		<div class="item active">
+			<div class="date">2015.10.02  18:30</div>
+			<div class="status">接受任务</div>
+		</div>
+		<div class="item current">
+			<div class="date">2015.11.16  22:12</div>
+			<div class="status">正在推广，已推广了n天</div>
+		</div>
+		<div class="item">
+			<div class="date">2015.11.17 15:13</div>
+			<div class="status">任务结束</div>
+		</div>
+	</section>
+
+	<footer>
+		<div class="publish">
+			<div class="button">发布评价</div>
+		</div>
+		<div class="cs">点点客服：	<span class="phone">400-7878-7878</span></div>
+	</footer>
+
+	<!-- loading -->
+	<article class="loading">
+    <div class="spinner">
+      <div class="bubble-1"></div>
+      <div class="bubble-2"></div>
+    </div>
+	</article>
+
+	<script src="scripts/libs/zepto.min.js"></script>
+	<script src="scripts/utils.js"></script>
+	<script src="scripts/detail.js"></script>
+</body>
+</html>

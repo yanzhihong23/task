@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<meta name="format-detection" content="telephone=no">
+	<title>发表评价</title>
+	<link rel="stylesheet" type="text/css" href="styles/libs/animation.css">
+	<link rel="stylesheet" type="text/css" href="styles/loading.css">
+	<link rel="stylesheet" type="text/css" href="styles/alert.css">
+	<link rel="stylesheet" type="text/css" href="styles/evaluate.css">
+</head>
+<body>
+	<article class="content">
+		<header class="info clearfix">
+			<img src="images/avatar-girl@2x.png" width="60px" class="avatar">
+			<div class="desc">
+				<div class="company">XXX推广公司</div>
+				<div class="user">
+					<span class="name">张三</span>
+					<span class="phone">13829083210</span>
+				</div>
+			</div>
+		</header>
+
+		<textarea rows="5" placeholder="请写下您的评价" id="comment"></textarea>
+
+		<section class="ratings">
+			<div class="item clearfix">
+				<div class="pull-left">工作态度</div>
+				<div class="pull-right full-height score" id="attitude">
+					<i class="star" data-value="1"></i>
+					<i class="star" data-value="2"></i>
+					<i class="star" data-value="3"></i>
+					<i class="star" data-value="4"></i>
+					<i class="star" data-value="5"></i>
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="pull-left">满意程度</div>
+				<div class="pull-right full-height score" id="satisfaction">
+					<i class="star" data-value="1"></i>
+					<i class="star" data-value="2"></i>
+					<i class="star" data-value="3"></i>
+					<i class="star" data-value="4"></i>
+					<i class="star" data-value="5"></i>
+				</div>
+			</div>
+			<div class="item clearfix">
+				<div class="pull-left">方法传授</div>
+				<div class="pull-right full-height score" id="method">
+					<i class="star" data-value="1"></i>
+					<i class="star" data-value="2"></i>
+					<i class="star" data-value="3"></i>
+					<i class="star" data-value="4"></i>
+					<i class="star" data-value="5"></i>
+				</div>
+			</div>
+		</section>
+
+		<footer>
+			<div class="submit">
+				<div class="button">提交</div>
+			</div>
+		</footer>
+	</article>
+	
+	<!-- loading -->
+	<article class="loading">
+    <div class="spinner">
+      <div class="bubble-1"></div>
+      <div class="bubble-2"></div>
+    </div>
+	</article>
+
+	<!-- alert popup -->
+	<article class="alert">
+		<div class="wrapper">
+			<header class="title">评价成功</header>
+			<section class="content">
+				感谢您对本次推广服务的评价，此评价将记录到外包商的年度考评审核中。
+			</section>
+			<footer class="footer" hidden>
+				<div class="button">知道了~</div>
+			</footer>
+		</div>
+	</article>
+
+	<script src="scripts/libs/zepto.min.js"></script>
+	<script src="scripts/utils.js"></script>
+	<script src="scripts/evaluate.js"></script>
+
+</body>
+</html>

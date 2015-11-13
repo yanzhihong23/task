@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+	<title>任务列表</title>
+	<link rel="stylesheet" type="text/css" href="styles/loading.css">
+	<link rel="stylesheet" type="text/css" href="styles/list.css">
+</head>
+<body>
+	<nav class="flex-center">
+		<article class="switcher">
+			<div class="item">进行中(4)</div>
+			<div class="item active">完成</div>
+		</article>
+	</nav>
+
+	<article class="task-list">
+		<section class="item">
+			<i class="icon">
+				<img src="images/status-01@4x.png" width="25px">
+			</i>
+			<div class="content">
+				<div class="time">2015.10.03   18:99</div>
+				<div class="desc">发布中，等待接受任务</div>
+			</div>
+		</section>
+		<section class="item">
+			<i class="icon">
+				<img src="images/status-02@4x.png" width="25px">
+			</i>
+			<div class="content">
+				<div class="time">2015.10.03   18:99</div>
+				<div class="desc">您的任务已被xxx接受</div>
+			</div>
+		</section>
+	</article>
+
+	<!-- loading -->
+	<article class="loading">
+    <div class="spinner">
+      <div class="bubble-1"></div>
+      <div class="bubble-2"></div>
+    </div>
+	</article>
+
+	<script src="scripts/libs/zepto.min.js"></script>
+	<script src="scripts/utils.js"></script>
+	<script src="scripts/list.js"></script>
+</body>
+</html>

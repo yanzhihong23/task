@@ -1,0 +1,102 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html, body{
+	height: 100%;
+}
+
+body{
+	font-size: 14px;
+	color: #333;
+	line-height: 1.42;
+	background: #f2f2f2;
+}
+
+.flex-center{
+	display: -webkit-box;
+  display: box;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-justify-content: center;
+  -webkit-align-items: center;
+  justify-content: center;
+  align-items: center;
+  -webkit-box-align: center;
+}
+
+nav{
+	height: 80px;
+}
+
+.switcher{
+	line-height: 38px;
+	height: 38px;
+	border-radius: 38px;
+	background: #fff;
+	color: #9b9b9b;
+	font-size: 16px;
+	text-align: center;
+}
+
+.switcher .item{
+	display: block;
+	float: left;
+	width: 120px;
+	border-radius: 38px;
+	cursor: pointer;
+}
+
+.switcher .item:not(:first-child){
+	margin-left: -19px;
+}
+
+.switcher .item.active{
+	color: #fff;
+	background: #32B77D;
+}
+
+.task-list .item{
+	height: 100px;
+	background: #fff;
+	margin-bottom: 4px;
+	position: relative;
+	font-size: 16px;
+	line-height: 2;
+	padding: 15px;
+	cursor: pointer;
+}
+
+.task-list .item:after{
+	content: '';
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	margin-top: -13px;
+	display: inline-block;
+	width: 15px;
+	height: 27px;
+	background: url(../images/arrow@2x.png) no-repeat;
+	background-size: cover;
+}
+
+.item .icon{
+	position: absolute;
+	left: 25px;
+	top: 18px;
+}
+
+.item .content{
+	padding-left: 50px;
+}
+
+.item .content .time{
+	color: #9B9B9B;
+}
+
+.item .content .desc{
+	color: #4a4a4a;
+	font-weight: lighter;
+}
