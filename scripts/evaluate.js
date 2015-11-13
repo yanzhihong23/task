@@ -1,10 +1,6 @@
 $(function() {
-	var utils = new Utils();
-
-	var headers = localStorage.getItem('task.headers');
-	if(headers) {
-		headers = JSON.parse(headers);
-	}
+	var utils = new Utils(),
+			headers = utils.getHeaders();
 
 	$('.score').click(function(e) {
 		var val = $(e.target).data('value');

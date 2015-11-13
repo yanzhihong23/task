@@ -1,17 +1,13 @@
 $(function() {
-	var utils = new Utils();
-
-	var headers = localStorage.getItem('task.headers');
-	if(headers) {
-		headers = JSON.parse(headers);
-	}
+	var utils = new Utils(),
+			headers = utils.getHeaders();
 
 	$.ajax({
 		type: 'POST',
 		url: utils.HOST + '/getTaskDetail',
 		headers: headers,
 		data: $.param({
-			taskId: ''
+			taskId: '3'
 		}),
 		beforeSend: function(xhr, settings) {
 			$('.loading').show();

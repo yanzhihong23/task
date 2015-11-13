@@ -1,12 +1,6 @@
 $(function() {
-	var utils = new Utils();
-
-	var headers = localStorage.getItem('task.headers');
-	if(headers) {
-		headers = JSON.parse(headers);
-	}
-
-	console.log(headers);
+	var utils = new Utils(),
+			headers = utils.getHeaders();
 
 	var getTaskList = function(type, start) {
 		$.ajax({

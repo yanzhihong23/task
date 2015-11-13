@@ -26,5 +26,32 @@
     return query_string;
 	};
 
+	Utils.prototype.setHeaders = function(headers) {
+		localStorage.setItem('task.headers', JSON.stringify(headers));
+	};
+
+	Utils.prototype.getHeaders = function() {
+		var headers = localStorage.getItem('task.headers');
+		if(headers) {
+			headers = JSON.parse(headers);
+		}
+
+		return headers;
+	};
+
+	Utils.prototype.init = function() {
+		var search = this.getSearch(),
+				zjtoken = search.zjtoken || '64C8B923-8ABE-42CE-ABF5-AEBACDA09DF3-75022-00009F62C13819AC`AATmZNU1hZX/rUCJTc2o4Z5bMbj9Ab7I`1',
+				store_id = search.store_id || 7,
+				headers = {
+					'Content-Type': 'application/x-www-form-urlencoded',
+					'zjtoken': zjtoken,
+					'store_id': store_id,
+					'userType': 2
+				};
+				
+		this.setHeaders(headers);
+	};
+
 	window.Utils = Utils;
  })();
