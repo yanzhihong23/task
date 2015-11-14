@@ -21,21 +21,29 @@ $(function() {
 				$('.user .phone').html(detail.acceptorMobileNumber);
 				$('.task').html('任务: ' + detail.taskContent);
 
+				switch(detail.status) {
+					case 1: // accepted
+					case 2: // progress
+						$('#accept').addClass('active');
+						$('#promote').addClass('current');
+						$('#promote .date').html(utils.dateFormatter());
+						break;
+					case 3: // completed
+						$('.review .button').removeAttr('disabled');
+					case 4: // reviewed
+					case 5: // paied
+						$('#accept, #promote, #complete').addClass('active');
+						break;
+				}
+
 				if(detail.acceptedDate) {
-					$('#accept, #promote').addClass('active');
 					$('#accept .date').html(utils.dateFormatter(detail.acceptedDate));
 					if(detail.taskPeriodDay) {
 						$('#promote .status').html('已推广了' + detail.taskPeriodDay + '天');
 					}
 				}
 
-				// if(detail.taskPeriodDay) {
-				// 	$('#promote').addClass('active');
-				// 	$('#promote .status').html('已推广了' + detail.taskPeriodDay + '天');
-				// }
-
 				if(detail.finishDate) {
-					$('#complete').addClass('active');
 					$('#complete .date').html(utils.dateFormatter(detail.acceptedDate));
 					if(!detail.reviewDate) {
 						$('.review .button').removeAttr('disabled').click(function(e) {
