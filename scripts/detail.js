@@ -23,7 +23,7 @@ $(function() {
 
 				if(detail.acceptedDate) {
 					$('#accept, #promote').addClass('active');
-					$('#accept .date').html(moment(detail.acceptedDate).format('YYYY-MM-DD HH:mm'));
+					$('#accept .date').html(utils.dateFormatter(detail.acceptedDate));
 					if(detail.taskPeriodDay) {
 						$('#promote .status').html('已推广了' + detail.taskPeriodDay + '天');
 					}
@@ -36,7 +36,7 @@ $(function() {
 
 				if(detail.finishDate) {
 					$('#complete').addClass('active');
-					$('#complete .date').html(moment(detail.acceptedDate).format('YYYY-MM-DD HH:mm'));
+					$('#complete .date').html(utils.dateFormatter(detail.acceptedDate));
 					if(!detail.reviewDate) {
 						$('.review .button').removeAttr('disabled').click(function(e) {
 							location.href = 'review.html?taskId=' + taskId;

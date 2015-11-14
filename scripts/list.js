@@ -46,7 +46,7 @@ $(function() {
 							obj.status = status;
 							obj.desc = desc;
 
-							var updatedDate = moment(obj.updatedDate).format('YYYY-MM-DD HH:mm');
+							var updatedDate = utils.dateFormatter(obj.updatedDate);
 							obj.updatedDate = updatedDate;
 							
 							return obj;

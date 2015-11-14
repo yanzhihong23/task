@@ -39,6 +39,21 @@
 		return headers;
 	};
 
+	Utils.prototype.dateFormatter = function(str) {
+		var date = new Date(str),
+				year = date.getFullYear(),
+				month = date.getMonth() + 1,
+				day = date.getDate(),
+				hours = date.getHours(),
+				minutes = date.getMinutes();
+
+		var appendZero = function(obj) {
+			return (obj < 10 ? '0' : '') + obj;
+		};
+
+		return year + '-' + appendZero(month) + '-' + appendZero(day) + ' ' + appendZero(hours) + ':' + appendZero(minutes)
+	}; 
+
 	Utils.prototype.init = function() {
 		var search = this.getSearch(),
 				zjtoken = search.zjtoken || '64C8B923-8ABE-42CE-ABF5-AEBACDA09DF3-75022-00009F62C13819AC`AATmZNU1hZX/rUCJTc2o4Z5bMbj9Ab7I`1',
