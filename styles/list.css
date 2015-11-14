@@ -28,7 +28,13 @@ body{
 }
 
 nav{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
 	height: 80px;
+	z-index: 10;
+	background: #f2f2f2;
 }
 
 .switcher{
@@ -56,6 +62,11 @@ nav{
 .switcher .item.active{
 	color: #fff;
 	background: #32B77D;
+}
+
+.task-list{
+	margin-top: 80px;
+	margin-bottom: 85px;
 }
 
 .task-list .item{
@@ -86,6 +97,28 @@ nav{
 	position: absolute;
 	left: 25px;
 	top: 18px;
+	width: 25px;
+	height: 25px;
+}
+
+.icon.published{
+	background: url(../images/status-01@4x.png) no-repeat;
+	background-size: cover;
+}
+
+.icon.accepted{
+	background: url(../images/status-03@4x.png) no-repeat;
+	background-size: cover;
+}
+
+.icon.completed{
+	background: url(../images/status-02@4x.png) no-repeat;
+	background-size: cover;
+}
+
+.icon.reviewed{
+	background: url(../images/status-04@4x.png) no-repeat;
+	background-size: cover;
 }
 
 .item .content{
@@ -99,4 +132,37 @@ nav{
 .item .content .desc{
 	color: #4a4a4a;
 	font-weight: lighter;
+}
+
+footer{
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background: rgba(255,255,255,.95);
+	border-top: solid 1px #f2f2f2;
+	box-shadow: 0 0 4px 2px #f2f2f2;
+}
+
+footer .publish{
+	padding: 20px;
+}
+
+.button{
+	display: block;
+	width: 100%;
+	height: 43px;
+	line-height: 43px;
+	background: #32B77D;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	outline: none;
+	border: 0;
+	border-radius: 3px;
+	cursor: pointer;
+}
+
+.button:disabled{
+	background: #95D8BB;
 }

@@ -45,11 +45,12 @@
 				store_id = search.store_id || 7,
 				headers = {
 					'Content-Type': 'application/x-www-form-urlencoded',
+					'Cache-Control': 'max-age=60',
 					'zjtoken': zjtoken,
-					'store_id': store_id,
+					'storeid': store_id,
 					'userType': 2
 				};
-				
+
 		this.setHeaders(headers);
 	};
 

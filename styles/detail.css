@@ -134,7 +134,11 @@ body{
 	cursor: pointer;
 }
 
-.publish{
+.button:disabled{
+	background: #95D8BB;
+}
+
+.review{
 	padding: 20px; 
 }
 
@@ -158,4 +162,17 @@ body{
   		left: 0;
   		bottom: 0;
   	}
+}
+
+aside .back{
+	position: fixed;
+	left: 0;
+	top: 50%;
+	margin-top: -55px;
+	width: 37px;
+	height: 110px;
+	background: url(../images/back-btn@2x.png) no-repeat;
+	background-size: cover;
+	z-index: 10;
+	cursor: pointer;
 }

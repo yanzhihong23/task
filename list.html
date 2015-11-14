@@ -10,31 +10,33 @@
 <body>
 	<nav class="flex-center">
 		<article class="switcher">
-			<div class="item">进行中(4)</div>
-			<div class="item active">完成</div>
+			<div class="item active" data-type="1">进行中</div>
+			<div class="item" data-type="2">完成</div>
 		</article>
 	</nav>
 
 	<article class="task-list">
-		<section class="item">
-			<i class="icon">
-				<img src="images/status-01@4x.png" width="25px">
-			</i>
+		<!-- <section class="item">
+			<i class="icon published"></i>
 			<div class="content">
 				<div class="time">2015.10.03   18:99</div>
 				<div class="desc">发布中，等待接受任务</div>
 			</div>
 		</section>
 		<section class="item">
-			<i class="icon">
-				<img src="images/status-02@4x.png" width="25px">
-			</i>
+			<i class="icon accepted"></i>
 			<div class="content">
 				<div class="time">2015.10.03   18:99</div>
 				<div class="desc">您的任务已被xxx接受</div>
 			</div>
-		</section>
+		</section> -->
 	</article>
+
+	<footer>
+		<div class="publish">
+			<button class="button">发布</button>
+		</div>
+	</footer>
 
 	<!-- loading -->
 	<article class="loading">
@@ -45,6 +47,7 @@
 	</article>
 
 	<script src="scripts/libs/zepto.min.js"></script>
+	<script src="scripts/libs/moment.js"></script>
 	<script src="scripts/utils.js"></script>
 	<script src="scripts/list.js"></script>
 </body>

@@ -1,6 +1,7 @@
 $(function() {
 	var utils = new Utils(),
-			headers = utils.getHeaders();
+			headers = utils.getHeaders(),
+			taskId = utils.getSearch().taskId;
 
 	$('.score').click(function(e) {
 		var val = $(e.target).data('value');
@@ -23,7 +24,7 @@ $(function() {
 			url: utils.HOST + '/reviewTask',
 			headers: headers,
 			data: $.param({
-				taskId: '',
+				taskId: taskId,
 				attitudeScore: attitude,
 				satisfactionScore: satisfaction,
 				methodScore: method,
@@ -35,6 +36,12 @@ $(function() {
 			success: function(data) {
 				if(+data.flag === 1) {
 					$('.alert').addClass('slideInUp animated flash show');
+
+					setTimeout(function() {
+						location.href = 'list.html';
+					}, 3000);
+				} else {
+					alert('啊哦，出错了~');
 				}
 			},
 			complete: function(xhr, status) {
