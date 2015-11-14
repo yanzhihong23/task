@@ -40,7 +40,7 @@
 	};
 
 	Utils.prototype.dateFormatter = function(str) {
-		var date = new Date(str),
+		var date = str ? new Date(str) : new Date(),
 				year = date.getFullYear(),
 				month = date.getMonth() + 1,
 				day = date.getDate(),
