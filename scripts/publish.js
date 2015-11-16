@@ -17,6 +17,8 @@ $(function() {
 				$('.address-wrapper .name').html('店铺: ' + info.storeName);
 				$('.address-wrapper .address').html(info.address);
 				$('.desc .contacts').html(info.realName + '(' + info.mobileNumber + ')');
+
+				$('.task-content .store-name').html(info.storeName);
 			}
 		},
 		complete: function(xhr, status) {
@@ -32,7 +34,7 @@ $(function() {
 			headers: headers,
 			data: $.param({
 				taskTitle: '店铺推广',
-				taskContent: '推广' + info.storeName + '，为期45天。'
+				taskContent: '推广' + info.storeName + '，为期30天。'
 			}),
 			beforeSend: function(xhr, settings) {
 				$('.loading').show();

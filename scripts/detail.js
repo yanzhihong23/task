@@ -47,7 +47,7 @@ $(function() {
 					$('#complete .date').html(utils.dateFormatter(detail.acceptedDate));
 					if(!detail.reviewDate) {
 						$('.review .button').removeAttr('disabled').click(function(e) {
-							location.href = 'review.html?taskId=' + taskId;
+							location.href = 'evaluate.html?taskId=' + taskId;
 						});
 					}
 				}
