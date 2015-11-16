@@ -11,10 +11,10 @@
 			$('.loading').show();
 		},
 		success: function(data) {
-			if(+data.flag === 1 && +data.data.switchOpen ===1) { // enabled
-				location.href = 'list.html';
+			if(+data.flag === 1) {
+				location.href = +data.data.switchOpen === 1 ? 'list.html' : 'progress.html?type=disabled';
 			} else {
-				location.href = 'progress.html?type=disabled';
+				alert(data.msg);
 			}
 		},
 		error: function(err) {
