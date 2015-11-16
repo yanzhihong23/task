@@ -1,7 +1,9 @@
 $(function() {
 	var utils = new Utils(),
-			headers = utils.getHeaders();
+			headers = utils.getHeaders(),
+			info;
 
+	// get store info
 	$.ajax({
 		type: 'POST',
 		url: utils.HOST + '/getStoreInfo',
@@ -11,7 +13,7 @@ $(function() {
 		},
 		success: function(data) {
 			if(+data.flag === 1) {
-				var info = data.data;
+				info = data.data;
 				$('.address-wrapper .name').html('店铺: ' + info.storeName);
 				$('.address-wrapper .address').html(info.address);
 				$('.desc .contacts').html(info.realName + '(' + info.mobileNumber + ')');
@@ -22,6 +24,7 @@ $(function() {
 		}
 	});
 
+	// publish handler
 	$('.publish').click(function(e) {
 		$.ajax({
 			type: 'POST',
@@ -29,7 +32,7 @@ $(function() {
 			headers: headers,
 			data: $.param({
 				taskTitle: '店铺推广',
-				taskContent: '推广xxxx，为期45填。'
+				taskContent: '推广' + info.storeName + '，为期45天。'
 			}),
 			beforeSend: function(xhr, settings) {
 				$('.loading').show();
