@@ -3,6 +3,14 @@ $(function() {
 			headers = utils.getHeaders(),
 			taskId = utils.getSearch().taskId;
 
+	var detail = localStorage.getItem('task.taskDetail');
+	if(detail) {
+		detail = JSON.parse(detail);
+		$('.desc .company').html(detail.acceptorCompany);
+		$('.desc .name').html(detail.acceptorName);
+		$('.desc .phone').html(detail.acceptorMobileNumber);
+	}
+
 	$('.score').click(function(e) {
 		var val = $(e.target).data('value');
 		var parent = $(e.target).parent();

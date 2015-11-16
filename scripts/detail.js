@@ -16,6 +16,9 @@ $(function() {
 		success: function(data) {
 			if(+data.flag === 1) {
 				var detail = data.data;
+				// save detail data for review page
+				localStorage.setItem('task.taskDetail', JSON.stringify(detail));
+
 				$('.company').html(detail.acceptorCompany);
 				$('.user .name').html(detail.acceptorName);
 				$('.user .phone').html(detail.acceptorMobileNumber);
