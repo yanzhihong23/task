@@ -53,6 +53,8 @@ $(function() {
 						});
 
 						render(list);
+					} else {
+						$('.task-list').html('');
 					}
 
 					console.log(list);
