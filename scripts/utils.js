@@ -56,8 +56,8 @@
 
 	Utils.prototype.init = function() {
 		var search = this.getSearch(),
-				zjtoken = search.zjtoken || '64C8B923-8ABE-42CE-ABF5-AEBACDA09DF3-75022-00009F62C13819AC`AATmZNU1hZX/rUCJTc2o4Z5bMbj9Ab7I`1',
-				store_id = search.store_id || 7,
+				zjtoken = search.zjtoken || 'AA6C935B-519C-423D-A4CF-5E6E248D036B-15240-000006C5D1E6EBC6`7APVlAiIhUc8Vh02Wa0V5slLKb60If/N`52',
+				store_id = search.store_id || 58,
 				headers = {
 					'Content-Type': 'application/x-www-form-urlencoded',
 					'Cache-Control': 'max-age=60',
