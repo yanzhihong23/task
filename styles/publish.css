@@ -54,7 +54,7 @@ body:after{
 }
 
 .house{
-	min-height: 50%;
+	min-height: 375px;
 	
 }
 
@@ -64,12 +64,20 @@ body:after{
 }
 
 .house .body{
-	margin: -30px 20px 20px;
+	margin: -30px 20px 0;
 	background: #fff;
 	min-height: 250px;
 	border-radius: 4px;
 	box-shadow: rgba(49,49,49,.5) 0 3px 5px 0;
-	padding: 45px 15px 20px;
+	padding-top: 25px;
+}
+
+.body article{
+	padding: 20px 15px;
+}
+
+.body article:not(:last-child){
+	border-bottom: solid 4px #95d8bb;
 }
 
 .store{
@@ -88,12 +96,12 @@ body:after{
 }
 
 .avatar-wrapper{
-	width: 95px;
-	height: 95px;
+	width: 85px;
+	height: 85px;
 	margin-right: 10px;
 	border-top-left-radius: 95px;
 	border-top-right-radius: 95px;
-	background: #FAF5EA;
+	/*background: #FAF5EA;*/
 	float: left;
 }
 
@@ -103,17 +111,14 @@ body:after{
 
 img.avatar{
 	display: block;
-	/*width: 76px;*/
 	width: 100%;
 	padding: 10px;
 }
 
 .body .desc{
 	background: #FAF5EA;
-	line-height: 25px;
-	padding: 20px 18px 30px;
+	padding: 10px 18px;
 	color: #4A4A4A;
-	margin-top: -15px;
 }
 
 .confirm-wrapper{
@@ -139,4 +144,39 @@ img.avatar{
 	height: 50px;
 	line-height: 50px;
 	margin-top: 18px;
+}
+
+
+.task-form .title{
+	font-size: 13px;
+	padding-bottom: 2px;
+}
+
+.task-form input{
+	display: block;
+	border: 0;
+	border-radius: 0;
+	outline: none;
+	padding: 0 15px;
+	width: 100%;
+	line-height: 40px;
+	font-size: 14px;
+	color: #262626;
+	margin-bottom: 10px;
+	background: #FAF5EA;
+}
+
+.task-form textarea{
+	display: block;
+	border: 0;
+	width: 100%;
+	line-height: 25px;
+	resize: none;
+	font-size: 14px;
+	padding: 15px;
+	outline: none;
+	color: #262626;
+	border-radius: 0;
+	margin-bottom: 20px;
+	background: #FAF5EA;
 }

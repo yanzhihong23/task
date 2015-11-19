@@ -28,13 +28,18 @@ $(function() {
 
 	// publish handler
 	$('.publish').click(function(e) {
+		var title = $('#task_title').val(),
+				content = $('#task_content').val();
+
+		if(!title || !content) return;
+
 		$.ajax({
 			type: 'POST',
 			url: utils.HOST + '/publishTask',
 			headers: headers,
 			data: $.param({
-				taskTitle: '店铺推广',
-				taskContent: '推广' + info.storeName + '，为期30天。'
+				taskTitle: title,
+				taskContent: content
 			}),
 			beforeSend: function(xhr, settings) {
 				$('.loading').show();
