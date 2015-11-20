@@ -46,7 +46,7 @@ $(function() {
 					$('.alert').addClass('slideInUp animated flash show');
 
 					setTimeout(function() {
-						location.href = 'list.html';
+						location.href = 'list.html?v=1.0';
 					}, 3000);
 				} else {
 					alert('啊哦，出错了~');

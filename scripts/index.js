@@ -12,7 +12,7 @@
 		},
 		success: function(data) {
 			if(+data.flag === 1) {
-				location.href = +data.data.switchOpen === 1 ? 'list.html' : 'disabled.html';
+				location.href = +data.data.switchOpen === 1 ? 'list.html?v=1.0' : 'disabled.html?v=1.0';
 			} else {
 				alert(data.msg);
 			}
