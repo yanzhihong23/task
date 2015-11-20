@@ -12,7 +12,7 @@
 		},
 		success: function(data) {
 			if(+data.flag === 1) {
-				location.href = +data.data.switchOpen === 1 ? 'list.html' : 'progress.html?type=disabled';
+				location.href = +data.data.switchOpen === 1 ? 'list.html' : 'disabled.html';
 			} else {
 				alert(data.msg);
 			}
