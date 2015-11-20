@@ -23,6 +23,7 @@ body{
   justify-content: center;
   align-items: center;
   -webkit-box-align: center;
+  -webkit-box-pack: center;
 }
 
 body:after{
@@ -55,7 +56,6 @@ body:after{
 
 .house{
 	min-height: 375px;
-	
 }
 
 .house .eave{
@@ -66,14 +66,25 @@ body:after{
 .house .body{
 	margin: -30px 20px 0;
 	background: #fff;
-	min-height: 250px;
 	border-radius: 4px;
 	box-shadow: rgba(49,49,49,.5) 0 3px 5px 0;
-	padding-top: 25px;
+	padding: 20px;
+}
+
+.house .body.task-form{
+	margin-top: 55px;
+	padding-top: 10px;
+	position: relative;
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
 }
 
 .body article{
 	padding: 20px 15px;
+}
+
+.body .store-info{
+	padding-top: 0;
 }
 
 .body article:not(:last-child){
@@ -149,7 +160,7 @@ img.avatar{
 
 .task-form .title{
 	font-size: 13px;
-	padding-bottom: 2px;
+	padding-bottom: 4px;
 }
 
 .task-form input{
@@ -170,13 +181,46 @@ img.avatar{
 	display: block;
 	border: 0;
 	width: 100%;
-	line-height: 25px;
+	line-height: 22px;
 	resize: none;
 	font-size: 14px;
-	padding: 15px;
+	padding: 10px 15px;
 	outline: none;
 	color: #262626;
 	border-radius: 0;
 	margin-bottom: 20px;
 	background: #FAF5EA;
+}
+
+.pull-right{
+	float: right;
+}
+
+.cmds{
+	position: absolute;
+	width: 100%;
+	top: -43px;
+	left: 0;
+}
+
+.cmd{
+	float: left;
+	width: 48%;
+	height: 43px;
+	line-height: 43px;
+	color: #fff;
+	font-size: 16px;
+	text-align: center;
+	background: rgba(0,0,0,.5);
+	border-top-left-radius: 4px;
+	border-top-right-radius: 4px;
+}
+
+.cmd:first-child{
+	margin-right: 4%;
+}
+
+.cmd.active{
+	color: #32B77D;
+	background: #fff;
 }

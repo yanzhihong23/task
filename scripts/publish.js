@@ -1,7 +1,12 @@
 $(function() {
 	var utils = new Utils(),
 			headers = utils.getHeaders(),
-			info;
+			info,
+			standardTask = {
+				title: '推广任务30天',
+				content: '推广累计20天每日订单数65单以上，且每日复购金额达到500元以上，并且总用户数达到600以上，小店微信群人数达到200（需满足80%为小区有效用户）以上，完成任务奖励人民币7000元(含税)。'
+			},
+			isStandard = true;
 
 	// get store info
 	$.ajax({
@@ -39,7 +44,8 @@ $(function() {
 			headers: headers,
 			data: $.param({
 				taskTitle: title,
-				taskContent: content
+				taskContent: content,
+				taskType: isStandard ? 1 : 2
 			}),
 			beforeSend: function(xhr, settings) {
 				$('.loading').show();
@@ -57,4 +63,19 @@ $(function() {
 			}
 		});
 	});
+
+	$('.cmd').click(function(e) {
+		$('.cmd').removeClass('active');
+		$(e.target).addClass('active');
+		if($(e.target).attr('id') === 'standard') {
+			isStandard = true;
+			$('#task_title').attr('disabled', true).val(standardTask.title);
+			$('#task_content').attr('disabled', true).val(standardTask.content);
+		} else {
+			isStandard = false
+			$('#task_title, #task_content').removeAttr('disabled').val('');
+		}
+	});
+
+	$('#standard').trigger('click');
 });
